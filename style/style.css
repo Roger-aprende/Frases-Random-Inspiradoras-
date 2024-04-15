@@ -1,0 +1,153 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    background-image: url(/images/fondo.jpg);
+    background-size: cover;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+    padding-left:0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.title{
+    text-align: center;
+    font-family: 'poppins';
+    font-size: 2rem;
+    text-shadow: 10px solid #1313131e;
+    color: #fff;
+    text-decoration: underline #3d3dff9a;
+}
+
+.main{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 90%;
+    padding: 0 2rem 1rem;
+
+
+        & .paragrahp{
+            max-width: 800px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 1.6rem;
+            color: #fff;
+            font-family: 'lexend deca';
+        
+            animation-name: salto-colors;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-delay: 5s;
+        }
+}
+
+
+.modal{
+    display: flex;
+    position: relative;
+
+    width: 540px;
+    height: 280px;
+    border-radius: 10px;
+    outline: none;
+
+    &::backdrop{
+        background-color: rgba(0,0,0,.55);
+    }
+}
+
+.modal__icon{
+    display: grid;
+    place-content: center;
+    width: 40%;
+    background-color: rgb(49, 49, 190);
+}
+
+.modal__emoji{
+    font-size: 3.5rem;
+}
+
+.modal__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+
+    margin-top: .5rem;
+    padding:0 1rem;
+    font-family: 'lexend deca';
+    text-align: center;
+    background-color: rgb(243, 243, 226);
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: 'poppins';
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    padding: .2rem .8rem;
+    cursor: pointer;
+}
+
+#selector{
+    font-family: 'poppins';
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #000;
+    -webkit-text-stroke: 1px #5a5a5a;
+    cursor: pointer;
+    background-color: #ffffff3f;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+
+        &:hover{
+            text-shadow: 4px 4px #000; 
+        }    
+}
+
+.deseo{color: purple;}
+.tip{color: yellow;}
+.frase{color: blue;}
+
+
+
+@keyframes salto-colors {
+    10%{
+        color: #fff;
+    }
+
+    40%{
+        color: rgb(240, 240, 44);
+    }
+
+    70%{
+        color: #fff;
+    }
+
+    100%{
+        color: rgb(240, 240, 44);
+    }
+}
